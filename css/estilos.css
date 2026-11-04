@@ -138,6 +138,10 @@
     font-family: var(--fuente-mono);
     font-size: 0.9em;
   }
+  p {
+    max-inline-size: 65ch;
+    text-wrap: pretty;
+  }
 }
 @layer layout {
   .contenedor {
