@@ -13,6 +13,10 @@
 @use "../abstracts" as *;
 
 @layer components {
+  .turno {
+    @include objetivo-tactil
+  }
+
   .boton {
     @include objetivo-tactil;
 
