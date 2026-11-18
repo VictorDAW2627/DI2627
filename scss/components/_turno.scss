@@ -25,16 +25,107 @@
 @use "../abstracts" as *;
 
 @layer components {
-  .turno {
+  .turnos {
     display: grid;
+    gap: var(--espacio-s);
+  }
+
+  .turno {
+    @include objetivo-tactil;
+    display: grid;
+    align-items: center;
     gap: var(--espacio-3xs);
     padding: var(--espacio-s);
-    border: 1px solid var(--color-borde);
+    border: 2px solid var(--color-borde-control);
     border-radius: var(--radio-tarjeta);
     background-color: var(--color-superficie);
     cursor: pointer;
+  }
 
-    // TODO: .turno__control, .turno__hora, .turno__estado
-    // TODO: estados seleccionado, ocupado y foco
+  .turno__control {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    min-inline-size: 1px;
+    min-block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .turno__hora {
+    font-weight: 800;
+  }
+
+  .turno__estado {
+    color: var(--color-texto-suave);
+    font-size: var(--paso-menos-1);
+  }
+
+  .turno:has(:checked) {
+    border: 3px solid var(--color-acento);
+    background-color: var(--color-acento-tenue);
+  }
+
+  .turno:has(:disabled) {
+    border-style: dashed;
+    cursor: not-allowed;
+    color: var(--color-texto-suave);
+    background-color: var(--color-desactivado-tenue);
+  }
+
+  .turno:has(:focus-visible) {
+    @include foco-visible;
+  }
+
+  .invitados {
+    border-color: var(--color-borde-control);
+  }
+
+  .invitados__grupo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-2xs);
+    margin-block-start: var(--espacio-s);
+  }
+
+  .invitados__grupo label {
+    @include objetivo-tactil;
+    flex: 1 1 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--espacio-2xs);
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+    background-color: var(--color-superficie);
+    cursor: pointer;
+  }
+
+  .invitados__opcion:has(:checked) {
+    border: 2px solid var(--color-acento);
+    background-color: var(--color-acento-tenue);
+    font-weight: 800;
+  }
+
+  .invitados__opcion:has(:focus-visible) {
+    @include foco-visible;
+  }
+
+  .aviso {
+    border: 2px solid var(--color-acento);
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-acento-tenue);
+    padding: var(--espacio-m);
+    margin-block: var(--espacio-l);
+  }
+
+  .aviso__titulo {
+    margin-block-start: 0;
+  }
+
+  .aviso__concepto {
+    overflow-wrap: anywhere;
+    font-weight: 700;
   }
 }

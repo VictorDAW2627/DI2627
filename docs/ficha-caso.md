@@ -11,7 +11,7 @@
 | Domicilio | Calle del Mar Azul, 12, Valencia |
 | Correo de contacto | contacto@residencia-mar-azul@ejemplo |
 | Teléfono Bizum de la comunidad | 600 000 000 |
-| N.º de pistas y nombres | Pista 1, Pista 2 y Pista 3 |
+| N.º de pistas y nombres | 3: Pista 1, Pista 2 y Pista 3 |
 | Duración del turno | 75 min |
 | Horario de apertura | Lunes a Domingo, de 08:00 a 22:00 |
 | Tarifa por invitado no residente | 2€ |

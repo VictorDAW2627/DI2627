@@ -1,8 +1,3 @@
-// =============================================================
-// ESTILOS BASE DE ELEMENTOS HTML  (RA2 · CE a)
-// Aquí se redefinen las ETIQUETAS, sin clases. Todo lo que un
-// elemento debe parecer "por defecto" en este proyecto.
-// =============================================================
 @use "../abstracts" as *;
 
 @layer base {
@@ -22,24 +17,126 @@
   }
 
   h1 {
+    margin-block: var(--espacio-l) var(--espacio-s);
     font-size: var(--paso-4);
   }
 
   h2 {
+    margin-block: var(--espacio-l) var(--espacio-s);
     font-size: var(--paso-3);
   }
 
   h3 {
+    margin-block: var(--espacio-m) var(--espacio-xs);
     font-size: var(--paso-2);
+  }
+
+  p {
+    max-inline-size: 65ch;
+    margin-block: 0 var(--espacio-s);
+    text-wrap: pretty;
+  }
+
+  small {
+    font-size: var(--paso-menos-1);
+  }
+
+  strong {
+    font-weight: 750;
+  }
+
+  ul,
+  ol {
+    margin-block: var(--espacio-s);
+    padding-inline-start: var(--espacio-l);
+  }
+
+  li + li {
+    margin-block-start: var(--espacio-2xs);
+  }
+
+  hr {
+    block-size: 1px;
+    margin-block: var(--espacio-l);
+    border: 0;
+    background-color: var(--color-borde);
+  }
+
+  table {
+    inline-size: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: var(--espacio-s);
+    border: 1px solid var(--color-borde);
+    text-align: start;
+    vertical-align: top;
+  }
+
+  th {
+    background-color: var(--color-superficie);
+    font-weight: 750;
+  }
+
+  caption {
+    padding: var(--espacio-s);
+    font-weight: 750;
+    text-align: start;
+  }
+
+  fieldset {
+    min-inline-size: 0;
+    margin-block: var(--espacio-m);
+    padding: var(--espacio-m);
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+  }
+
+  legend {
+    padding-inline: var(--espacio-2xs);
+    color: var(--color-texto);
+    font-weight: 700;
+  }
+
+  label {
+    font-weight: 550;
+  }
+
+  input,
+  select {
+    font: inherit;
+  }
+
+  :where(input:not([type="radio"]):not([type="checkbox"])),
+  select {
+    @include objetivo-tactil;
+    inline-size: 100%;
+    padding: var(--espacio-xs);
+    border: 1px solid var(--color-borde-control);
+    border-radius: var(--radio-control);
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    @include objetivo-tactil;
+    inline-size: 1.25rem;
+    block-size: 1.25rem;
+    margin-inline-end: var(--espacio-2xs);
+    accent-color: var(--color-acento);
+    vertical-align: middle;
   }
 
   a {
     color: var(--color-acento);
     text-underline-offset: 0.2em;
+  }
 
-    &:hover {
-      text-decoration-thickness: 2px;
-    }
+  a:hover {
+    text-decoration-thickness: 2px;
   }
 
   :focus-visible {
@@ -51,83 +148,7 @@
     font-size: 0.9em;
   }
 
-  // TODO Fase 1: redefine al menos estos elementos con tokens
-  //   p (medida máxima de línea en ch), small, strong,
-  //   ul/ol, hr, table/th/td, fieldset/legend, label, input, select
-
-  p {
-    max-inline-size: 65ch;
-    text-wrap: pretty;
+  main {
+    padding-block: var(--espacio-l) var(--espacio-2xl);
   }
-
-  small {
-    font-size: var(--paso--1, 0.875rem);
-  }
-
-  strong {
-    font-weight: 700;
-  }
-
-  ul, ol {
-    padding-inline-start: 1.5rem;
-    margin-block: 1rem;
-
-    li + li {
-      margin-block-start: 0.375rem;
-    }
-  }
-
-  hr {
-    border: none;
-    height: 1px;
-    background-color: var(--color-borde);
-    margin-block: 2rem;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-block: 1.5rem;
-  }
-
-  th, td {
-    border: 1px solid var(--color-borde);
-    padding: 0.75rem 1rem;
-    text-align: left;
-    &:nth-child(4),
-    &:nth-child(5) {
-      text-align: right;
-      font-variant-numeric: tabular-nums;
-    }
-  }
-
-  fieldset {
-    border: 1px solid var(--color-borde-control);
-    border-radius: 0.375rem;
-    padding: 1rem 1.25rem;
-    margin-block: 1.5rem;
-  }
-
-  legend {
-    font-weight: 600;
-    padding-inline: 0.5rem;
-    color: var(--color-texto);
-  }
-
-  label {
-    display: block;
-    font-weight: 500;
-    margin-block-end: 0.375rem;
-  }
-
-  input, select {
-    border: 1px solid var(--color-borde-control);
-    border-radius: 0.375rem;
-    padding-inline: 0.75rem;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    width: 100%;
-    @include objetivo-tactil;
-  }
-
 }

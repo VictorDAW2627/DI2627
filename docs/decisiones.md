@@ -11,7 +11,7 @@ Se ha elegido trabajar directamente en código porque el objetivo de esta fase e
 
 ## 1. Color (RA1 · CE b)
 
-- **Tono de acento y escala:** Se ha elegido el verde como color principal, utilizando una escala de tonos claros y oscuros para adaptarse a los temas claro y oscuro. La escala se organiza en niveles de intensidad, desde los tonos más claros hasta los más oscuros, para mantener una identidad visual coherente.
+- **Tono de acento y escala:** Se ha elegido un verde de tono base 142º, indicado en la ficha del caso 6. La escala 50–950 se ha construido manteniendo ese matiz y reduciendo progresivamente la luminosidad: los niveles claros se reservan para superficies y los oscuros para texto y acentos.
 - **Contraste del acento:** Se utilizan tonos diferentes según el tema para mantener la legibilidad. En el tema claro se emplea un tono oscuro para el texto o los elementos de acento, mientras que en el tema oscuro se utiliza uno más claro. Así se evita que el acento pierda visibilidad sobre el fondo.
 - **Tokens semánticos añadidos:** Se han definido tokens para fondo, superficie, texto, texto suave, bordes, acento, foco, éxito, error, aviso y elementos desactivados. Esto permite identificar los colores por su función y no por su valor hexadecimal.
 - **Pares de contraste añadidos a `$pares-contraste`:** Se han contemplado combinaciones de texto y fondo, texto y superficie, texto suave y superficie, acento y superficie, texto sobre acento, estados de éxito, error y aviso, bordes de controles y foco. Se busca cumplir al menos 4,5:1 para texto normal y 3:1 para elementos de interfaz y texto grande.
@@ -37,7 +37,7 @@ Los radios se utilizan para suavizar los bordes de botones, campos y superficies
 | Componente | Estados | Cómo se resuelve cada estado en CSS |
 | --- | --- | --- |
 | Botón | normal, hover, foco, desactivado, secundario | Estilos base para el estado normal; `:hover` para interacción; `:focus-visible` para mostrar el foco; `:disabled` para desactivar; y una variante secundaria con menor protagonismo visual. |
-| Turno | disponible, seleccionado, ocupado, foco | Estilo base para disponible; `:has(.turno__control:checked)` para seleccionado; `:has(.turno__control:disabled)` para ocupado; y `:has(.turno__control:focus-visible)` para el foco. |
+| Turno | disponible, seleccionado, ocupado, foco | Estilo base para disponible; `:has(:checked)` para seleccionado; `:has(:disabled)` para ocupado; y `:has(:focus-visible)` para el foco. |
 | Contador de invitados | normal, seleccionado, foco | Se agrupan las opciones en un `fieldset` con controles de tipo radio. Se diferencia la opción seleccionada y se mantiene visible el indicador de foco. |
 | Aviso de pago | informativo | Se utiliza una sección con título, importe, teléfono y concepto. La jerarquía tipográfica y el espaciado permiten distinguir la información importante. |
 

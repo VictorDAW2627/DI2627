@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- TODO Fase 1: nombre de la comunidad de tu ficha de caso -->
-    <title>Guía de estilo · Pádel Las Palmeras</title>
+    <title>Guía de estilo · Pádel Mar Azul</title>
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
   <body>
@@ -17,7 +17,7 @@
     Ruta B (VS Code): es tu lienzo de diseño.
   -->
     <header class="guia-cabecera contenedor">
-      <p><strong>Pádel Las Palmeras</strong> · Guía de estilo</p>
+      <p><strong>Pádel Mar Azul</strong> · Guía de estilo</p>
 
       <!-- Selector de tema sin JavaScript: lo lee :root:has() en tokens/_index.scss -->
       <fieldset class="selector-tema">
@@ -141,8 +141,8 @@
                 </td>
                 <td><code>--color-acento</code></td>
                 <td>Botones y enlaces</td>
-                <td>8,79:1</td>
-                <td>5,67:1</td>
+                <td>6,17:1</td>
+                <td>8,32:1</td>
               </tr>
               <tr>
                 <td>
@@ -153,8 +153,8 @@
                 </td>
                 <td><code>--color-acento-hover</code></td>
                 <td>Botones al pasar el ratón</td>
-                <td>13,21:1</td>
-                <td>9,86:1</td>
+                <td>8,58:1</td>
+                <td>11,87:1</td>
               </tr>
               <tr>
                 <td>
@@ -165,8 +165,8 @@
                 </td>
                 <td><code>--color-sobre-acento</code></td>
                 <td>Texto sobre botones de acento</td>
-                <td>8,79:1</td>
-                <td>6,91:1</td>
+                <td>6,17:1</td>
+                <td>10,15:1</td>
               </tr>
               <tr>
                 <td>
@@ -177,8 +177,8 @@
                 </td>
                 <td><code>--color-acento-tenue</code></td>
                 <td>Fondos de selección y avisos</td>
-                <td>7,77:1</td>
-                <td>5,98:1</td>
+                <td>5,77:1</td>
+                <td>7,14:1</td>
               </tr>
               <tr>
                 <td>
@@ -213,8 +213,8 @@
                 </td>
                 <td><code>--color-foco</code></td>
                 <td>Anillo de foco del teclado</td>
-                <td>8,40:1</td>
-                <td>6,91:1</td>
+                <td>5,90:1</td>
+                <td>10,15:1</td>
               </tr>
               <tr>
                 <td>
@@ -344,8 +344,8 @@
       </section>
 
       <!-- ===================================================== -->
-      <section class="guia__seccion" aria-labelledby="espaciado">
-        <h2 id="espaciado">Espaciado</h2>
+      <section class="guia__seccion" aria-labelledby="componentes">
+        <h2 id="componentes">Componentes</h2>
         <p>
           Múltiplos de 4 px. Ningún margen, relleno ni hueco usa un valor fuera
           de esta escala.
@@ -391,7 +391,7 @@
           están desactivados y no pueden seleccionarse.
         </p>
         <fieldset class="guia__fila">
-          <legend>Turnos del jueves 29 de octubre</legend>
+          <legend>Turnos del viernes 20 de noviembre</legend>
           <label class="turno">
             <input
               class="turno__control"
@@ -399,8 +399,8 @@
               name="turno"
               value="0900"
             />
-            <span class="turno__hora">09:00 – 10:30</span>
-            <span class="turno__estado">Disponible · Pista Central</span>
+            <span class="turno__hora">09:00 – 10:15</span>
+            <span class="turno__estado">Disponible · Pista 1</span>
           </label>
           <label class="turno">
             <input
@@ -410,7 +410,7 @@
               value="1030"
               disabled
             />
-            <span class="turno__hora">10:30 – 12:00</span>
+            <span class="turno__hora">10:30 – 11:45</span>
             <span class="turno__estado">Ocupado</span>
           </label>
           <label class="turno">
@@ -421,8 +421,8 @@
               value="1800"
               checked
             />
-            <span class="turno__hora">18:00 – 19:30</span>
-            <span class="turno__estado">Disponible · Pista Central</span>
+            <span class="turno__hora">18:00 – 19:15</span>
+            <span class="turno__estado">Disponible · Pista 1</span>
           </label>
         </fieldset>
 
@@ -433,22 +433,22 @@
           <legend>¿Cuántos invitados vas a traer?</legend>
 
           <div class="invitados__grupo">
-            <label>
+            <label class="invitados__opcion">
               <input type="radio" name="invitados" value="0" />
               0
             </label>
 
-            <label>
+            <label class="invitados__opcion">
               <input type="radio" name="invitados" value="1" checked />
               1
             </label>
 
-            <label>
+            <label class="invitados__opcion">
               <input type="radio" name="invitados" value="2" />
               2
             </label>
 
-            <label>
+            <label class="invitados__opcion">
               <input type="radio" name="invitados" value="3" />
               3
             </label>
@@ -463,7 +463,7 @@
 
           <p>
             Importe del turno:
-            <strong>12,00 €</strong>
+            <strong>4,00 €</strong>
           </p>
 
           <p>
@@ -473,7 +473,7 @@
 
           <p>
             Concepto:
-            <code class="aviso__concepto">PALMERAS-RESERVA-001</code>
+            <code class="aviso__concepto">PADEL BloqueB2.ºA 20-11</code>
           </p>
         </section>
 
