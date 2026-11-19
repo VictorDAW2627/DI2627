@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis turnos · Pádel Mar Azul</title>
+  <meta name="description" content="Portal ficticio de reservas de pistas de pádel de Residencia Mar Azul">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="cabecera__interior contenedor">
+    <a class="cabecera__marca" href="index.html">Pádel Mar Azul</a>
+    <nav class="menu" aria-label="Principal">
+      <ul class="menu__lista">
+        <li><a class="menu__enlace" href="index.html">Turnos</a></li>
+        <li><a class="menu__enlace" href="mis-turnos.html">Mis turnos</a></li>
+        <li><a class="menu__enlace" href="normas.html">Normas</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" class="contenedor">
+  <h1>Mis turnos</h1>
+  <p>Consulta las reservas asociadas a tu vivienda: Bloque B, 2.º A.</p>
+  <div class="tabla-desplazable" role="region" aria-label="Tabla de mis reservas" tabindex="0">
+    <table class="tabla-reservas">
+      <caption>Reservas de Bloque B, 2.º A</caption>
+      <thead>
+        <tr><th scope="col">Fecha</th><th scope="col">Hora</th><th scope="col">Pista</th><th scope="col">Acción</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>20/11/2026</td><td>09:00-10:15</td><td>Pista 1</td>
+          <td><button class="boton boton--secundario" type="button">Cancelar</button></td>
+        </tr>
+        <tr>
+          <td>24/11/2026</td><td>18:00-19:15</td><td>Pista 3</td>
+          <td><button class="boton boton--secundario" type="button">Cancelar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="nota">Las cancelaciones de la maqueta no modifican datos reales. En el servicio definitivo se permitirían hasta 12 horas antes del turno</p>
+  <a href="index.html" class="boton">Reservar otro turno</a>
+</main>
+
+<footer class="pie">
+  <div class="pie__interior contenedor">
+    <address class="pie__datos">
+      Comunidad de Propietarios Residencial Mar Azul · CIF B-00000000<br>
+      Calle del Mar Azul, 12, Valencia<br>
+      <a href="mailto:contacto@residencial-mar-azul.example">contacto@residencial-mar-azul.example</a>
+    </address>
+    <nav aria-label="Legal">
+      <ul class="pie__enlaces">
+        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+        <li><a href="privacidad.html">Privacidad</a></li>
+        <li><a href="normas.html">Normas de uso</a></li>
+      </ul>
+    </nav>
+    <p class="pie__nota"><small>Proyecto académico ficticio · DIW 0615 · 2.ºDAW</small></p>
+  </div>
+</footer>
+
+</body>
+</html>

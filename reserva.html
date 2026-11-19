@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmar reserva · Pádel Mar Azul</title>
+  <meta name="description" content="Portal ficticio de reservas de pistas de pádel de Residencial Mar Azul">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="cabecera__interior contenedor">
+    <a class="cabecera__marca" href="index.html">Pádel Mar Azul</a>
+    <nav class="menu" aria-label="Principal">
+      <ul class="menu__lista">
+        <li><a class="menu__enlace" href="index.html">Turnos</a></li>
+        <li><a class="menu__enlace" href="mis-turnos.html">Mis turnos</a></li>
+        <li><a class="menu__enlace" href="normas.html">Normas</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" class="contenedor">
+  <h1>Confirmar reservas</h1>
+  <p>Revisa los datos del turno antes de continuar</p>
+  <form action="justificante.html" class="formulario" method="get">
+    <section class="resumen" aria-labelledby="resumen-titulo">
+      <h2 id="resumen-titulo">Resumen del turno</h2>
+      <dl class="datos-reserva">
+        <div><dt>Fecha</dt><dd>Viernes, 20 de noviembre de 2026</dd></div>
+        <div><dt>Horario</dt><dd>09:00-10:15 (75 minutos)</dd></div>
+        <div><dt>Pista</dt><dd>Pista 1</dd></div>
+        <div><dt>Vivienda</dt><dd>Bloque B, 2.º A</dd></div>
+      </dl>
+    </section>
+    <fieldset class="invitados">
+      <legend>¿Cuántos invitados no residentes traerás?</legend>
+      <p>La tarifa es de 2€ por invitado, con un máximo de 3</p>
+      <div class="invitados__grupo">
+        <label class=""><input type="radio" name="invitados" value="0"> 0</label>
+        <label class=""><input type="radio" name="invitados" value="1"> 1</label>
+        <label class=""><input type="radio" name="invitados" value="2"> 2</label>
+        <label class=""><input type="radio" name="invitados" value="3"> 3</label>
+      </div>
+    </fieldset>
+    <section class="aviso" aria-labelledby="aviso-titulo">
+      <h2 class="aviso__titulo" id="aviso-titulo">Pago de invitados mediante Bizum</h2>
+      <p>Importe del ejemplo: <strong>4,00€</strong> (2 invitados x 2€)</p>
+      <p>Teléfono Bizum de la comunidad: <strong>600 000 000</strong>.</p>
+      <p>Realiza el pago antes de comenzar el turno. En el concepto indica:</p>
+      <p><code class="aviso__concepto">PADEL BloqueB2.ºA 20-11</code></p>
+    </section>
+    <div class="campo campo-aceptacion">
+      <label class="aceptacion"><input type="checkbox" name="acepta-norma" value="si" required>He leído y acepto las <a href="normas.html">normas de uso</a> de las pistas</label>
+    </div>
+    <button class="boton" type="submit">Confirmar reserva</button>
+  </form>
+</main>
+
+<footer class="pie">
+  <div class="pie__interior contenedor">
+    <address class="pie__datos">
+      Comunidad de Propietarios Residencial Mar Azul · CIF B-00000000<br>
+      Calle del Mar Azul, 12, Valencia<br>
+      <a href="mailto:contacto@residencial-mar-azul.example">contacto@residencial-mar-azul.example</a>
+    </address>
+    <nav aria-label="Legal">
+      <ul class="pie__enlaces">
+        <li><a href="aviso-legal.html">Aviso Legal</a></li>
+        <li><a href="privacidad.html">Privacidad</a></li>
+        <li><a href="normas.html">Normas de uso</a></li>
+      </ul>
+    </nav>
+    <p class="pie__nota"><small>Proyecto académico ficticio · DIW 0615 · 2.ºDAW</small></p>
+  </div>
+</footer>
+
+</body>
+</html>

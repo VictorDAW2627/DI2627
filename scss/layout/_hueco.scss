@@ -2,6 +2,12 @@
 
 @layer layout {
   .hueco {
-
+    max-inline-size: none;
+    min-block-size: 8rem;
+    padding: var(--espacio-l);
+    border: 2px dashed var(--color-borde-control);
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-superficies);
+    color: var(--color-texto-suave);
   }
 }
